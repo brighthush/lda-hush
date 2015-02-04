@@ -23,7 +23,7 @@
 /*
  * Created on Mar 6, 2005
  */
-package org.knowceans.gibbstest;
+//package org.knowceans.gibbstest;
 
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
@@ -33,7 +33,7 @@ import java.text.NumberFormat;
  * documents in a corpus. The algorithm is introduced in Tom Griffiths' paper
  * "Gibbs sampling in the generative model of Latent Dirichlet Allocation"
  * (2002).
- * 
+ *
  * @author heinrich
  */
 public class LdaGibbsSampler {
@@ -127,7 +127,7 @@ public class LdaGibbsSampler {
 
     /**
      * Initialise the Gibbs sampler with data.
-     * 
+     *
      * @param V
      *            vocabulary size
      * @param data
@@ -142,7 +142,7 @@ public class LdaGibbsSampler {
      * Initialisation: Must start with an assignment of observations to topics ?
      * Many alternatives are possible, I chose to perform random assignments
      * with equal probabilities
-     * 
+     *
      * @param K
      *            number of topics
      * @return z assignment of topics to words
@@ -184,7 +184,7 @@ public class LdaGibbsSampler {
      * Main method: Select initial state ? Repeat a large number of times: 1.
      * Select an element 2. Update conditional on other elements. If
      * appropriate, output summary for each run.
-     * 
+     *
      * @param K
      *            number of topics
      * @param alpha
@@ -251,7 +251,7 @@ public class LdaGibbsSampler {
      * Sample a topic z_i from the full conditional distribution: p(z_i = j |
      * z_-i, w) = (n_-i,j(w_i) + beta)/(n_-i,j(.) + W * beta) * (n_-i,j(d_i) +
      * alpha)/(n_-i,.(d_i) + K * alpha)
-     * 
+     *
      * @param m
      *            document
      * @param n
@@ -312,7 +312,7 @@ public class LdaGibbsSampler {
     /**
      * Retrieve estimated document--topic associations. If sample lag > 0 then
      * the mean value of all sampled statistics for theta[][] is taken.
-     * 
+     *
      * @return theta multinomial mixture of document topics (M x K)
      */
     public double[][] getTheta() {
@@ -339,7 +339,7 @@ public class LdaGibbsSampler {
     /**
      * Retrieve estimated topic--word associations. If sample lag > 0 then the
      * mean value of all sampled statistics for phi[][] is taken.
-     * 
+     *
      * @return phi multinomial mixture of topic words (K x V)
      */
     public double[][] getPhi() {
@@ -362,7 +362,7 @@ public class LdaGibbsSampler {
 
     /**
      * Print table of multinomial data
-     * 
+     *
      * @param data
      *            vector of evidence
      * @param fmax
@@ -403,7 +403,7 @@ public class LdaGibbsSampler {
 
     /**
      * Configure the gibbs sampler
-     * 
+     *
      * @param iterations
      *            number of total iterations
      * @param burnIn
@@ -423,7 +423,7 @@ public class LdaGibbsSampler {
 
     /**
      * Driver with example data.
-     * 
+     *
      * @param args
      */
     public static void main(String[] args) {
@@ -497,7 +497,7 @@ public class LdaGibbsSampler {
     /**
      * create a string representation whose gray value appears as an indicator
      * of magnitude, cf. Hinton diagrams in statistics.
-     * 
+     *
      * @param d
      *            value
      * @param max
