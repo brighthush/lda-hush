@@ -1,6 +1,6 @@
-# lda-hush
-Learn(read other's code) and Implement Latent Dirichlet Allocation Model  
-
+# LdaGibbsSampler.java Reading Note
+This readme.md is code reading note created by brighthush. After read this code, I will rewrite LDA model 
+in C++.  
 
 # LdaGibbsSampler.java
 ## Variables
