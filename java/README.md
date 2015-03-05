@@ -26,7 +26,11 @@ understand this code, we should remember what does these variables mean.
 > SAMPLE_LAG  
 > dispcol = 0  
 
-
+### Full Conditional for Gibbs Sampling  
+If you want to sample topic for a word in document, it means you want to sample from this distribution 
+p(z_i | z_{-i}, w). In LDA, after simplication, we get this probabilisty proportion to p(w|z_{-i})p(z_{-i}).
+This means this full conditional distribution looks like a postorial distribution. But in this eqation, {-i} means
+the current word is ignored in this statistal distribution.
 
 ## Functions
 
