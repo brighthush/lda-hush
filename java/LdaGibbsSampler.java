@@ -119,7 +119,8 @@ public class LdaGibbsSampler {
     private static int ITERATIONS = 1000;
 
     /**
-     * sample lag (if -1 only one sample taken)
+     * This is lag number for calculate theta and phi. If sample lag (if -1 only one sample taken) greater than 
+     * -1, then SAMPLE_LAG iterations will be used to calculate theta and phi.
      */
     private static int SAMPLE_LAG;
 
@@ -514,6 +515,7 @@ public class LdaGibbsSampler {
             }
             return "<" + x + ">";
         }
-        return "[" + shades[a] + "]";
+        //return "[" + shades[a] + "]";
+        return "[" + String.format("%.04f", d) + "]";
     }
 }

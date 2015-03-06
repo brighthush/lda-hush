@@ -1,3 +1,7 @@
 
 # ignore java class files
 *.class
+*/build/
+*/bin/
+plda*
+plda/
