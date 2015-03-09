@@ -20,8 +20,14 @@ int main()
         printf("\n");
     }
     GibbsLda gibbsLda(docs, V);
-    gibbsLda.init(3);
-    gibbsLda.initState();
+    gibbsLda.init(2);
+    //gibbsLda.initState();
+
+    gibbsLda.gibbs(2.0, 0.5);
+    double **theta = gibbsLda.getTheta();
+    double **phi = gibbsLda.getPhi();
+    gibbsLda.display(theta, phi);
+
     return 0;
 }
 

@@ -48,12 +48,12 @@ public:
     void initState();
     void gibbs(double alpha, double beta);
     int sampleFullConditional(int m, int n);
-    void updateParams()
+    void updateParams();
     
     double** getTheta();
     double** getPhi();
 
-    void display();
+    void display(double **theta, double **phi);
 };
 
 #endif
