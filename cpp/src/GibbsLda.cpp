@@ -60,7 +60,7 @@ void GibbsLda::initState()
     }
 }
 
-void gibbs(double alpha, double beta)
+void GibbsLda::gibbs(double alpha, double beta)
 {
     this->alpha = alpha;
     this->beta = beta;
@@ -150,7 +150,42 @@ void GibbsLda::updateParams()
     statnum++;
 }
 
+double** GibbsLda::getTheta()
+{
+    printf("getTheta ...\n");
+    if(statnum == 0)
+    {
+        printf("statnum == 0, exit()\n"; exit(-1));
+    }
+    for(int i=0; i<M; ++i)
+    {
+        for(int j=0; j<K; ++j)
+        {
+            thetasum[i][j] /= statnum;
+        }
+    }
+    return thetasum;
+}
+
+double** GibbsLda::getPhi()
+{
+    printf("getPhi ...\n");
+    if(statnum == 0)
+    {
+        printf("statnum == 0, exit()\n"; exit(-1));
+    }
+    for(int i=0; i<K; ++i)
+    {
+        for(int j=0; j<V; ++j)
+        {
+            phisum[i][j] /= statnum;
+        }
+    }
+    return phisum;
+}
+
 void GibbsLda::display()
 {
     cout << "display hello." << endl;
 }
+

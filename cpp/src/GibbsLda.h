@@ -54,7 +54,6 @@ public:
     double** getPhi();
 
     void display();
-
 };
 
 #endif
